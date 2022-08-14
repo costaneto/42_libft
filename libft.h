@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 21:12:58 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/14 20:21:07 by marvin           ###   ########.fr       */
+/*   Updated: 2022/08/14 20:21:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 // atoi
-void	*ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n);
 // calloc
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
