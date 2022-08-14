@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 21:12:58 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/12 22:30:56 by dneto            ###   ########.fr       */
+/*   Updated: 2022/08/14 20:21:07 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 # include <stdlib.h>
 
 // atoi
-// bzero
+void	*ft_bzero(void *s, size_t n)
 // calloc
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-// memset
+void	*ft_memset(void *s, int c, size_t n);
 // memcpy
 // memmove
 // memchr

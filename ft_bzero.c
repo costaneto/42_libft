@@ -6,23 +6,21 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 13:08:45 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/14 16:28:42 by marvin           ###   ########.fr       */
+/*   Updated: 2022/08/14 20:20:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	main(void)
+void	*ft_bzero(void *s, size_t n)
 {
-	char	arr[10] = "0123456789";
-	int	i = 0;
+	size_t	i;
 
-	bzero(arr + 2, 4);
-	while (i < 10)
+	i = 0;
+	while (i < n)
 	{
-		printf("[%d]: %c\n", i, arr[i]);
+		((char *)s)[i] = 0;
 		i++;
 	}
-	return (0);
+	return (s);
 }
