@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 19:45:21 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/13 18:47:54 by dneto            ###   ########.fr       */
+/*   Updated: 2022/08/14 16:03:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		s[i] = (unsigned char)c;
+		((char*)s)[i] = (unsigned char)c;
 		i++;
 	}
 	return s;
@@ -29,13 +29,13 @@ void	*ft_memset(void *s, int c, size_t n)
 
 int	main(void)
 {
-	char	arr[] = "";
+	char	arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	int	i = 0;
 
-	memset(arr + 2, 42, 3);
+	ft_memset(arr + 2, 42, 3);
 	while (i < 10)
 	{
-		printf("[%d]: %c\n", i, arr[i]);
+		printf("[%d]: %d\n", i, arr[i]);
 		i++;
 	}
 	return (0);
