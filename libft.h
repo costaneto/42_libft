@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 21:12:58 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/14 20:21:52 by marvin           ###   ########.fr       */
+/*   Updated: 2022/08/15 17:00:35 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 void	*ft_memset(void *s, int c, size_t n);
-// memcpy
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
 // memmove
 // memchr
 // memcmp
