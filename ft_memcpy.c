@@ -6,13 +6,13 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 15:23:50 by marvin            #+#    #+#             */
-/*   Updated: 2022/08/22 22:46:45 by dneto            ###   ########.fr       */
+/*   Updated: 2022/08/31 17:02:39 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy(void* dest, const void* src, size_t n)
 {
 	size_t	i;
 
