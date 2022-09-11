@@ -1,0 +1,24 @@
+-- ft_strlcat:
+
+#include <stdio.h>
+#include <bsd/string.h>
+
+int	main(void)
+{
+	char	s1[] = "0123456789";
+	char	s2[] = "abcdefghij";
+	size_t	a;
+	size_t	i = 0;
+
+	printf("\n\ns1: %s\ns2: %s", s1, s2);
+	a = strlcpy(s2 + 3, s1, 0);
+	printf("\n\ns1: %s\ns2: %s\na: %zu\n\n", s1, s2, a);
+	printf("s2: ");
+	while (s2[i])
+	{
+		printf("[%zu] ", i);
+		i++;
+	}
+	printf(">> %zu position(s)\n\n", i);
+	return (0);
+}

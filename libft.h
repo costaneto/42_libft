@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 21:12:58 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/31 17:05:09 by dneto            ###   ########.fr       */
+/*   Updated: 2022/09/11 17:42:00 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	*ft_memset(void *s, int c, size_t n);
 // memchr
 // memcmp
 size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
