@@ -61,3 +61,37 @@ int	main(void)
 	printf("__________________________________________\n\n");
 	return (0);
 }
+
+ ------------------------------------{ ft_memchr }-----------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	char s1[] = "Say hello to my little friend";
+	char c1 = 'y';
+	char c2 = 'e';
+	char c3 = 'o';
+	char c4 = 'f';
+	char c5 = 'i';
+	char c6 = 'z';
+	char *p;
+
+	printf("\n\n	\"%s\"\n", s1);
+	printf("__________________________________________________\n\n");
+	p = ft_memchr(s1, c1, 29);
+	printf("----{ %c > %p > %c [next: '%c%c%c'] }----\n\n", c1, p, *p, *(p + 1), *(p + 2), *(p + 3));
+	p = ft_memchr(s1, c2, 29);
+	printf("----{ %c > %p > %c [next: '%c%c%c'] }----\n\n", c2, p, *p, *(p + 1), *(p + 2), *(p + 3));
+	p = ft_memchr(s1, c3, 29);
+	printf("----{ %c > %p > %c [next: '%c%c%c'] }----\n\n", c3, p, *p, *(p + 1), *(p + 2), *(p + 3));
+	p = ft_memchr(s1, c4, 29);
+	printf("----{ %c > %p > %c [next: '%c%c%c'] }----\n\n", c4, p, *p, *(p + 1), *(p + 2), *(p + 3));
+	p = ft_memchr(s1, c5, 29);
+	printf("----{ %c > %p > %c [next: '%c%c%c'] }----\n\n", c5, p, *p, *(p + 1), *(p + 2), *(p + 3));
+	p = ft_memchr(s1, c6, 29);
+	printf("----{ %c > %p }----\n", c6, p); // Can't get value (*p) > seg fault
+	printf("__________________________________________________\n\n\n");
+	return (0);
+}
