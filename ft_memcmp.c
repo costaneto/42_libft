@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:51:36 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/02 23:21:53 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/02 23:25:19 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,9 @@ int main(void)
 	// char s3[] = "";
 
 	// s1
-	printf("\n\ns1: \"%s\" (len: %zu)\n______________________________________\n\n", s1, ft_strlen(s1));
+	printf("\n\ns1: \"%s\" (len: %zu)\n"
+		"______________________________________"
+		"\n\n", s1, ft_strlen(s1));
 	int res1 = ft_memcmp(s1, s1, 15);
 	int res2 = memcmp(s1, s1, 15);
 	printf("[15] s1: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
