@@ -23,6 +23,10 @@ int	main(void)
 	return (0);
 }
 
+
+
+
+
  ------------------------------------{ ft_strncmp }-----------------------------------------
 
 #include <stdio.h>
@@ -62,6 +66,10 @@ int	main(void)
 	return (0);
 }
 
+
+
+
+
  ------------------------------------{ ft_memchr }-----------------------------------------
 
 #include <stdio.h>
@@ -93,5 +101,169 @@ int	main(void)
 	p = ft_memchr(s1, c6, 29);
 	printf("----{ %c > %p }----\n", c6, p); // Can't get value (*p) > seg fault
 	printf("__________________________________________________\n\n\n");
+	return (0);
+}
+
+
+
+
+
+
+ ------------------------------------{ ft_memcmp }-----------------------------------------
+
+#include <string.h>
+#include <stdio.h>
+
+int main(void)
+{
+	char s1[] = "abcdefghi";
+	char s2[] = "abcdzfghi";
+	char s3[] = "abcdef";
+	char s4[] = "";
+
+	printf("\n=====================================================\n\n");
+	printf("\n  Test output template:\n\n");
+	printf("  str [test_len]: str_value >> ft_memcmp >> memcmp\n\n");
+
+	// s1
+	printf("\n\n	     s1: \"%s\" (len: %zu)\n"
+		"     __________________________________________"
+		"\n\n", s1, ft_strlen(s1));
+	int res1 = ft_memcmp(s1, s1, 15);
+	int res2 = memcmp(s1, s1, 15);
+	printf("	s1 [15]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s1, s2, 9);
+	res2 = memcmp(s1, s2, 9);
+	printf("	s2 [9]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s1, s2, 3);
+	res2 = memcmp(s1, s2, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s1, s2, 0);
+	res2 = memcmp(s1, s2, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s1, s3, 9);
+	res2 = memcmp(s1, s3, 9);
+	printf("	s3 [9]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s1, s3, 3);
+	res2 = memcmp(s1, s3, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s1, s3, 0);
+	res2 = memcmp(s1, s3, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s1, s4, 9);
+	res2 = memcmp(s1, s4, 9);
+	printf("	s4 [9]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+	res1 = ft_memcmp(s1, s4, 3);
+	res2 = memcmp(s1, s4, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+	res1 = ft_memcmp(s1, s4, 0);
+	res2 = memcmp(s1, s4, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+
+	// s2
+	printf("\n\n	     s2: \"%s\" (len: %zu)\n"
+		"     __________________________________________"
+		"\n\n", s2, ft_strlen(s2));
+	res1 = ft_memcmp(s2, s2, 15);
+	res2 = memcmp(s2, s2, 15);
+	printf("	s2 [15]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s2, s1, 9);
+	res2 = memcmp(s2, s1, 9);
+	printf("	s1 [9]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s2, s1, 3);
+	res2 = memcmp(s2, s1, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s2, s1, 0);
+	res2 = memcmp(s2, s1, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s2, s3, 9);
+	res2 = memcmp(s2, s3, 9);
+	printf("	s3 [9]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s2, s3, 3);
+	res2 = memcmp(s2, s3, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s2, s3, 0);
+	res2 = memcmp(s2, s3, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s2, s4, 9);
+	res2 = memcmp(s2, s4, 9);
+	printf("	s4 [9]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+	res1 = ft_memcmp(s2, s4, 3);
+	res2 = memcmp(s2, s4, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+	res1 = ft_memcmp(s2, s4, 0);
+	res2 = memcmp(s2, s4, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+
+	// s3
+	printf("\n\n	     s3: \"%s\" (len: %zu)\n"
+		"     __________________________________________"
+		"\n\n", s3, ft_strlen(s3));
+	res1 = ft_memcmp(s3, s3, 15);
+	res2 = memcmp(s3, s3, 15);
+	printf("	s3 [15]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s3, s2, 9);
+	res2 = memcmp(s3, s2, 9);
+	printf("	s2 [9]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s3, s2, 3);
+	res2 = memcmp(s3, s2, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s3, s2, 0);
+	res2 = memcmp(s3, s2, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s3, s1, 9);
+	res2 = memcmp(s3, s1, 9);
+	printf("	s1 [9]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s3, s1, 3);
+	res2 = memcmp(s3, s1, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s3, s1, 0);
+	res2 = memcmp(s3, s1, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s3, s4, 9);
+	res2 = memcmp(s3, s4, 9);
+	printf("	s4 [9]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+	res1 = ft_memcmp(s3, s4, 3);
+	res2 = memcmp(s3, s4, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+	res1 = ft_memcmp(s3, s4, 0);
+	res2 = memcmp(s3, s4, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+
+	// s4
+	printf("\n\n	     s4: \"%s\" (len: %zu)\n"
+		"     __________________________________________"
+		"\n\n", s4, ft_strlen(s4));
+	res1 = ft_memcmp(s4, s4, 15);
+	res2 = memcmp(s4, s4, 15);
+	printf("	s4 [15]: \"%s\"  >>  %d  >>  %d\n\n", s4, res1, res2);
+	res1 = ft_memcmp(s4, s2, 9);
+	res2 = memcmp(s4, s2, 9);
+	printf("	s2 [9]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s4, s2, 3);
+	res2 = memcmp(s4, s2, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s4, s2, 0);
+	res2 = memcmp(s4, s2, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s4, s3, 9);
+	res2 = memcmp(s4, s3, 9);
+	printf("	s3 [9]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s4, s3, 3);
+	res2 = memcmp(s4, s3, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s4, s3, 0);
+	res2 = memcmp(s4, s3, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s4, s1, 9);
+	res2 = memcmp(s4, s1, 9);
+	printf("	s1 [9]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s4, s1, 3);
+	res2 = memcmp(s4, s1, 3);
+	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	res1 = ft_memcmp(s4, s1, 0);
+	res2 = memcmp(s4, s1, 0);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s1, res1, res2);
+	printf("\n=====================================================\n\n");
 	return (0);
 }
