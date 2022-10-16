@@ -267,3 +267,40 @@ int main(void)
 	printf("\n=====================================================\n\n");
 	return (0);
 }
+
+ ------------------------------------{ ft_memcmp }-----------------------------------------
+
+int	main(void)
+{
+	/*
+		Change the values manually.
+		Avoids cluttered output window.
+		I'm also too lazy atm to hard-code
+		or create an array.
+	*/
+	char lil1[] = "world!sdsd";
+	char big[] = "Hello world!";
+	size_t n = 0;
+
+	char *ptr = strnstr(big, lil1, n);
+
+	printf("\n\n %s\n\n", big);
+
+	printf("strnstr\n\n");
+	if (ptr)
+		printf("[ \"%s\" - %zu ] > %p > %c(%c)%c\n\n", lil1, n, ptr, *(ptr - 1), *(ptr), *(ptr + 1));
+	else
+		printf("[ \"%s\" - %zu ] > %p\n\n", lil1, n, ptr);
+	
+	char *ptr2 = ft_strnstr(big, lil1, n);
+	printf("ft_strnstr\n\n");
+	if (ptr2)
+		printf("[ \"%s\" - %zu ] > %p > %c(%c)%c\n\n", lil1, n, ptr2, *(ptr2 - 1), *(ptr2), *(ptr2 + 1));
+	else
+		printf("[ \"%s\" - %zu ] > %p\n\n", lil1, n, ptr2);
+
+	return (0);
+}
+
+
+
