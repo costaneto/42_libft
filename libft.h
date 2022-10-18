@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 21:12:58 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/16 11:43:22 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/18 23:11:07 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-// atoi
+int		ft_atoi(const char *str);
 void	*ft_bzero(void *s, size_t n);
 // calloc
 int		ft_isalnum(int c);

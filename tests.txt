@@ -303,4 +303,43 @@ int	main(void)
 }
 
 
+ ------------------------------------{ ft_atoi }-----------------------------------------
 
+int main(void)
+{
+    int         i = 0;
+    char        *str[21] = {
+                        "12345",
+                        "+12345",
+                        "-12345",
+                        "123.45",
+                        "+123.45",
+                        "-123.45",
+                        "123,45",
+                        "+123,45",
+                        "-123,45",
+                        "abc12345",
+                        "+abc12345",
+                        "-abc12345",
+                        "abc-12345",
+                        "abc+12345",
+                        "--12345",
+                        "++12345",
+                        "ab123c45",
+                        "-ab123c45",
+                        "+ab123c45",
+                        "ab-123c45",
+                        "ab+123c45"
+                    };
+    printf("\n\n");
+    while (i < 21)
+    {
+        if (atoi(str[i]) == ft_atoi(str[i]))
+			printf("%s >> Success\n\n", str[i]);
+		else
+			printf("%s >> Failure [ atoi: %d >> ft_atoi: %d ]\n\n", str[i], atoi(str[i]), ft_atoi(str[i]));
+        i++;
+    }
+    printf("\n\n");
+    return (0);
+}
