@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 18:07:23 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/22 18:41:17 by dneto            ###   ########.fr       */
+/*   Created: 2022/10/22 18:29:11 by dneto             #+#    #+#             */
+/*   Updated: 2022/10/22 21:13:16 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t n, size_t size)
 {
-	unsigned char	*temp;
-	size_t			i;
+	int	*ptr;
 
-	if (ft_strlen(dest) >= n && ft_strlen(src) >= n)
-	{
-		temp = malloc(n * sizeof(char));
-		i = 0;
-		while (i < n)
-		{
-			temp[i] = ((unsigned char *)src)[i];
-			i++;
-		}
-		i = 0;
-		while (i < n)
-		{
-			((unsigned char *)dest)[i] = temp[i];
-			i++;
-		}
-		free(temp);
-	}
-	return (dest);
+	ptr = malloc(n * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, n * size);
+	return (ptr);
 }

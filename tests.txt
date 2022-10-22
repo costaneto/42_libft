@@ -343,3 +343,35 @@ int main(void)
     printf("\n\n");
     return (0);
 }
+
+
+ ------------------------------------{ ft_atoi }-----------------------------------------
+
+int	main(void)
+{
+	long int	*test1;
+	long int	*test2;
+	int	i;
+
+	printf("\n\n   calloc: ");
+	i = 0;
+	test1 = calloc(10, sizeof(long int));
+	while (i < 10)
+	{
+		printf("%ld ", test1[i]);
+		i++;
+	}
+	free(test1);
+	printf("\n\nft_calloc: ");
+	i = 0;
+	test2 = ft_calloc(10, sizeof(long int));
+	while (i < 10)
+	{
+		printf("%ld ", test2[i]);
+		i++;
+	}
+	free(test2);
+	printf("\n\n");
+	return (0);
+}
+
