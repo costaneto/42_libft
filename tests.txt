@@ -245,8 +245,12 @@ int main(void)
 	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
 	res1 = ft_memcmp(s4, s2, 0);
 	res2 = memcmp(s4, s2, 0);
-	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", ----------{ ft_calloc }-----------------------------------------
-
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
+	res1 = ft_memcmp(s4, s3, 9);
+	res2 = memcmp(s4, s3, 9);
+	printf("	s3 [9]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
+	res1 = ft_memcmp(s4, s3, 3);
+	res2 = memcmp(s4, s3, 3);
 	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
 	res1 = ft_memcmp(s4, s3, 0);
 	res2 = memcmp(s4, s3, 0);
@@ -263,6 +267,9 @@ int main(void)
 	printf("\n=====================================================\n\n");
 	return (0);
 }
+
+
+
 
 
  ------------------------------------{ ft_memcmp }-----------------------------------------
@@ -296,7 +303,13 @@ int	main(void)
 	else
 		printf("[ \"%s\" - %zu ] > %p\n\n", lil1, n, ptr2);
 
-	return (0);----------{ ft_calloc }-----------------------------------------
+	return (0);
+}
+
+
+
+
+ ------------------------------------{ ft_atoi }-----------------------------------------
 
 int main(void)
 {
@@ -310,8 +323,7 @@ int main(void)
                         "-123.45",
                         "123,45",
                         "+123,45",
-                        "-123,45",----------{ ft_calloc }-----------------------------------------
-
+                        "-123,45",
                         "abc12345",
                         "+abc12345",
                         "-abc12345",
@@ -337,6 +349,7 @@ int main(void)
     printf("\n\n");
     return (0);
 }
+
 
 
 
@@ -372,7 +385,8 @@ int	main(void)
 
 
 
- ------------------------------------{ ft_calloc }-----------------------------------------
+
+ ------------------------------------{ ft_substr }-----------------------------------------
 
 #include <stdio.h>
 
@@ -393,5 +407,34 @@ int	main(void)
 			s2, ft_strlen(s2),
 			s3, ft_strlen(s3),
 			s4, ft_strlen(s4));
+	free(s2);
+	free(s3);
+	free(s4);
+	return (0);
+}
+
+
+
+
+
+ ------------------------------------{ ft_strjoin }-----------------------------------------
+#include <stdio.h>
+
+int main()
+{
+	char s1[] = "123443";
+	char s2[] = "sadasd\0 2323";
+	char *str;
+	size_t i = 0;
+
+	str = ft_strjoin(s1, s2);
+	printf(".\n.\n.\n.\n.\n.\n");
+	while (str[i])
+	{
+		printf("> %c\n", str[i]);
+		i++;
+	}
+	free(str);
+	printf(".\n.\n.\n.\n.\n.\n");
 	return (0);
 }
