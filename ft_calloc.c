@@ -6,12 +6,11 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 18:29:11 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/22 21:13:16 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/23 12:14:39 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_calloc(size_t n, size_t size)
 {
