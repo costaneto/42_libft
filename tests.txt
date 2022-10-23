@@ -245,12 +245,8 @@ int main(void)
 	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
 	res1 = ft_memcmp(s4, s2, 0);
 	res2 = memcmp(s4, s2, 0);
-	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", s2, res1, res2);
-	res1 = ft_memcmp(s4, s3, 9);
-	res2 = memcmp(s4, s3, 9);
-	printf("	s3 [9]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
-	res1 = ft_memcmp(s4, s3, 3);
-	res2 = memcmp(s4, s3, 3);
+	printf("	   [0]: \"%s\"  >>  %d  >>  %d\n\n", ----------{ ft_calloc }-----------------------------------------
+
 	printf("	   [3]: \"%s\"  >>  %d  >>  %d\n\n", s3, res1, res2);
 	res1 = ft_memcmp(s4, s3, 0);
 	res2 = memcmp(s4, s3, 0);
@@ -267,6 +263,7 @@ int main(void)
 	printf("\n=====================================================\n\n");
 	return (0);
 }
+
 
  ------------------------------------{ ft_memcmp }-----------------------------------------
 
@@ -299,11 +296,7 @@ int	main(void)
 	else
 		printf("[ \"%s\" - %zu ] > %p\n\n", lil1, n, ptr2);
 
-	return (0);
-}
-
-
- ------------------------------------{ ft_atoi }-----------------------------------------
+	return (0);----------{ ft_calloc }-----------------------------------------
 
 int main(void)
 {
@@ -317,7 +310,8 @@ int main(void)
                         "-123.45",
                         "123,45",
                         "+123,45",
-                        "-123,45",
+                        "-123,45",----------{ ft_calloc }-----------------------------------------
+
                         "abc12345",
                         "+abc12345",
                         "-abc12345",
@@ -343,6 +337,7 @@ int main(void)
     printf("\n\n");
     return (0);
 }
+
 
 
  ------------------------------------{ ft_calloc }-----------------------------------------
@@ -375,3 +370,28 @@ int	main(void)
 	return (0);
 }
 
+
+
+ ------------------------------------{ ft_calloc }-----------------------------------------
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char s1[] = "0123456789";
+	char *s2;
+	char *s3;
+	char *s4;
+
+	s2 = ft_substr(s1, 5, 7);
+	s3 = ft_substr(s1, 0, 10);
+	s4 = ft_substr(s1, 10, 1);
+	printf("\n\n");
+	printf("s2: %s  len > %ld\n"
+			"s3: %s  len > %ld\n"
+			"s4: %s  len > %ld\n",
+			s2, ft_strlen(s2),
+			s3, ft_strlen(s3),
+			s4, ft_strlen(s4));
+	return (0);
+}
