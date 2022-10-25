@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:55:29 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/24 19:42:58 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/25 18:30:39 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		has_first;
 	int		has_last;
 	size_t	i;
+	size_t	j;
 	char	*trim;
 
 	i = 0;
@@ -30,8 +31,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 			has_last = 1;
 		i++;
 	}
+	i = 0;
+	j = 1;
 	if (has_first && has_last)
+	{
 		trim = malloc((ft_strlen(s1) - 1) * sizeof(char));
-	if (has_first || )
+		while (s1[j] && j < ft_strlen(s1) - 1)
+		{
+			trim[i] = s1[j];
+			j++;
+			i++;
+		}
+	}
+	else if (has_first || has_last)
+	{
+		trim = malloc(ft_strlen(s1) * sizeof(char));
+		
+	}
+	else
+		trim = s1;
 	return (trim);
 }
