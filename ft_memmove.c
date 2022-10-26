@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 18:07:23 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/25 18:20:55 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/26 20:01:49 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,26 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		free(temp);
 	}
 	return (dest);
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+	char s[] = {65, 66, 67, 68, 69, 0, 45};
+	char s0[] = { 0,  0,  0,  0,  0,  0, 0};
+	char *test;
+	int i = 0;
+	test = ft_memmove(s0, s, 7);
+	int res = ft_memcmp(s, s0, 7);
+
+	printf("\n\n%d\n\n", res);
+	while (i < 7)
+	{
+		printf("\n{ %d }={ %d }={ %d }\n", test[i], s[i], s0[i]);
+		i++;
+	}
+	printf("\n\n");
+	return (0);	
 }
