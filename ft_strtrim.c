@@ -6,12 +6,11 @@
 /*   By: dneto <dneto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:55:29 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/26 18:10:10 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/26 18:46:12 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strtrim(char const *s, char const *set)
 {
