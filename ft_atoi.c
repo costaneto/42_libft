@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 18:33:51 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/18 23:06:39 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/28 18:14:02 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,18 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (res * signal);
+}
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    char str1[] = "fasfa3sfsa\0asda1";
+    char str2[] = "++1";
+    char str3[] = "-+1";
+
+    printf("\n\nstr1: %d    str2: %d    str3: %d\n\n", atoi(str1), atoi(str2), atoi(str3));
+    printf("\n\nstr1: %d    str2: %d    str3: %d\n\n", ft_atoi(str1), ft_atoi(str2), ft_atoi(str3));
+    return (0);
 }

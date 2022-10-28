@@ -1,3 +1,0 @@
-https://linuxhint.com/memset_function/
-https://www.learncpp.com/cpp-tutorial/pointers-and-arrays/
-https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
