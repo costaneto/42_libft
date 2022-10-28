@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 18:33:51 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/28 19:19:49 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/28 19:50:16 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	ft_atoi(const char *str)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		i++;
 		if (str[i] == '-')
 			signal *= -1;
+		i++;
 	}
 	while (str[i] && str[i] > 47 && str[i] < 58)
 	{
