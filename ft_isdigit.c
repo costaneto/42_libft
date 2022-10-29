@@ -6,13 +6,13 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 21:41:46 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/12 22:10:00 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/29 16:06:37 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if ((unsigned char)c >= '0' && (unsigned char)c <= '9')
+	if (c >= 48 && c <= 57)
 		return (2048);
 	return (0);
 }

@@ -6,14 +6,14 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 21:21:40 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/12 22:10:24 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/29 16:05:23 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if (((unsigned char)c >= 'a' && (unsigned char)c <= 'z')
-		|| ((unsigned char)c >= 'A' && (unsigned char)c <= 'Z'))
+	if ((c >= 97 && c <= 122)
+		|| (c >= 65 && c <= 90))
 		return (1024);
 	return (0);
 }

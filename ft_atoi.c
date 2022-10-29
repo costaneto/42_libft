@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 18:33:51 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/28 19:50:16 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/29 18:45:01 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,28 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
+	long	value;
 	int		signal;
-	int		res;
 
-	i = 0;
 	signal = 1;
-	res = 0;
-	if (!str)
+	value = 0;
+	if (!*str)
 		return (0);
-	while (str[i] >= 0 && str[i] <= 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
-			signal *= -1;
-		i++;
+		if (*str == '-')
+			signal = -1;
+		str++;
 	}
-	while (str[i] && str[i] > 47 && str[i] < 58)
+	while (ft_isdigit(*str))
 	{
-		res = res * 10 + (str[i] - 48);
-		i++;
+		value = value * 10 + (*str++ - 48);
+		if (value > 2147483648 && signal == -1)
+			return (0);
+		else if (value > 2147483647 && signal == 1)
+			return (-1);
 	}
-	return (res * signal);
+	return (value * signal);
 }
-
-// #include <stdlib.h>
-// #include <stdio.h>
-
-// int main()
-// {
-//     char str1[] = "1";
-//     char str2[] = "++1";
-//     char str3[] = "-+1";
-
-//     printf("\n\nstr1: %d    str2: %d    str3: %d\n\n", atoi(str1), atoi(str2), atoi(str3));
-//     printf("\n\nstr1: %d    str2: %d    str3: %d\n\n", ft_atoi(str1), ft_atoi(str2), ft_atoi(str3));
-//     return (0);
-// }

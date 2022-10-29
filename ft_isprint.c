@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:31:58 by dneto             #+#    #+#             */
-/*   Updated: 2022/08/12 22:09:43 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/29 16:06:49 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_isprint(int c)
 {
-	if ((unsigned char)c > 31 && (unsigned char)c < 127)
+	if (c > 31 && c < 127)
 		return (16384);
 	return (0);
 }
