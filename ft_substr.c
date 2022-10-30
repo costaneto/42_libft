@@ -6,24 +6,30 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 21:19:55 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/23 19:39:49 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/30 19:15:05 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
 
-	i = 0;
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		sub = malloc((ft_strlen(s + start) + 1) * sizeof(char));
 	else
 		sub = malloc((len + 1) * sizeof(char));
-	if (sub == NULL)
+	if (!sub)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		sub[i] = s[start + i];
