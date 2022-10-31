@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:55:29 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/27 17:07:37 by dneto            ###   ########.fr       */
+/*   Updated: 2022/10/31 17:57:51 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strtrim(char const *s, char const *set)
 	while (s[begin] && ft_strchr(set, s[begin]))
 		begin++;
 	if (begin == ft_strlen(s) - 1)
-		return (NULL);
+		return (ft_strdup(""));
 	while (s[stop] && ft_strchr(set, s[stop]))
 		stop--;
 	trim = malloc((stop - begin + 2) * sizeof(char));
