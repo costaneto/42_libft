@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:46:24 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/05 14:37:53 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/05 17:09:54 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,7 @@ char	**ft_split(char const *s, char sep)
 	if (!s)
 		return (NULL);
 	counter = ft_counter(s, sep);
-	printf("\n\n%d\n\n", counter);
-	arr = malloc(counter * sizeof(char *));
+	arr = malloc((counter + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);
 	i = 0;
@@ -69,18 +68,9 @@ char	**ft_split(char const *s, char sep)
 			s++;
 		temp = ft_getsubstr(s, sep);
 		arr[i++] = temp;
-		free(temp);
 		while (*s && *s != sep)
 			s++;
 	}
+	arr[i] = 0;
 	return (arr);
-}
-
-
-int main()
-{
-	char *string = "      split   ggg    this for   me  !       ";
-	char **result = ft_split(string, ' ');
-	printf("\n\n%s\n\n", result[0]);
-	return (0);
 }
