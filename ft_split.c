@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:46:24 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/02 17:46:01 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/05 08:52:47 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ if (!s)
 	if (!substr)
 		return (NULL);
 	ft_strlcpy(substr, s, (i + 1));
+	
+	arr[i] == &substr;
 
 	counter++;
 */
