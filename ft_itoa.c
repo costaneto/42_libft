@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/06 16:45:13 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/06 16:47:42 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ static int	digit_counter(int n)
 	}
 	if (n < 10)
 		count++;
-	return (count);
 }
 
 char	*ft_itoa(int n)
@@ -33,5 +32,4 @@ char	*ft_itoa(int n)
 	int		digit_count;
 
 	digit_count = 0;
-	return ((char *)digit_count);
 }
