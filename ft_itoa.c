@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/06 16:43:11 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/06 16:44:25 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ char	*ft_itoa(int n)
 	int		digit_count;
 
 	digit_count = 0;
-	return (digit_count);
+	return ((unsigned char *)digit_count);
 }
