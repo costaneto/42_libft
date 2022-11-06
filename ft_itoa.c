@@ -6,17 +6,15 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/06 16:47:42 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/06 17:31:38 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	digit_counter(int n)
+// Recursive method
+static int	counter(int n, int count)
 {
-	int	count;
-
-	count = 0;
 	if (n < 0)
 	{
 		count = 1;
@@ -24,12 +22,31 @@ static int	digit_counter(int n)
 	}
 	if (n < 10)
 		count++;
+	else
+		count = counter(n % 10, count);
+	return (count);
+}
+
+// Recursive method
+static void	create_str(char *s, int n, int count)
+{
+	// condition
+	
+	// alocate
+
+	// null terminate
+	s[count] = 0;
 }
 
 char	*ft_itoa(int n)
 {
 	char	*s;
-	int		digit_count;
+	int		char_count;
 
-	digit_count = 0;
+	char_count = counter(n, 0) + 1;
+	s = malloc(char_count * sizeof(char));
+	if (!s)
+		return (NULL);
+	create_str(s, n, char_count);
+	return (s);
 }
