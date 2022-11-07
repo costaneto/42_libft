@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/06 17:31:38 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/07 18:28:21 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	counter(int n, int count)
 	if (n < 10)
 		count++;
 	else
-		count = counter(n % 10, count);
+		count += counter(n % 10, count);
 	return (count);
 }
 
