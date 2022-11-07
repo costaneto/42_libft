@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/07 20:13:14 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/07 20:15:50 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	create_str(char *s, int n, int count)
 	s[count] = 0;
 	if (n < 0)
 	{
-		s[0] = "-";
+		s[0] = '-';
 		n = -n;
 		while (--count > 0)
 		{
