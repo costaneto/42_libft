@@ -1,7 +1,8 @@
 {
 	"files.associations": {
 		"libft.h": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"algorithm": "c"
 	},
 	"42header.email": "dneto@student.42lisboa.com"
 }

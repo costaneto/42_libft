@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/07 20:15:50 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/07 20:48:33 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,6 @@ char	*ft_itoa(int n)
 	s = malloc(char_count * sizeof(char));
 	if (!s)
 		return (NULL);
-	create_str(s, n, char_count);
+	create_str(s, n, char_count - 1);
 	return (s);
 }
