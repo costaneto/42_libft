@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/07 19:15:15 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/07 20:13:14 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,27 @@ static int	counter(int n, int count)
 	return (count);
 }
 
-// Recursive method
 static void	create_str(char *s, int n, int count)
 {
-	// condition
-	
-	// alocate
-
-	// null terminate
 	s[count] = 0;
+	if (n < 0)
+	{
+		s[0] = "-";
+		n = -n;
+		while (--count > 0)
+		{
+			s[count] = (n % 10) + 48;
+			n = n / 10;
+		}
+	}
+	else
+	{
+		while (--count >= 0)
+		{
+			s[count] = (n % 10) + 48;
+			n = n / 10;
+		}
+	}
 }
 
 char	*ft_itoa(int n)
