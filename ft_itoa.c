@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/07 20:48:33 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:04:57 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,40 +15,46 @@
 // Recursive method
 static int	counter(int n, int count)
 {
-	if (n < 0)
+	long	long_n;
+
+	long_n = n;
+	if (long_n < 0)
 	{
 		count = 1;
-		n = -n;
+		long_n = -long_n;
 	}
-	if (n < 10)
+	if (long_n < 10)
 		count++;
 	else
 	{
-		count = counter(n % 10, count);
-		count = counter(n / 10, count);
+		count = counter(long_n % 10, count);
+		count = counter(long_n / 10, count);
 	}
 	return (count);
 }
 
 static void	create_str(char *s, int n, int count)
 {
+	long	long_n;
+
+	long_n = n;
 	s[count] = 0;
-	if (n < 0)
+	if (long_n < 0)
 	{
 		s[0] = '-';
-		n = -n;
+		long_n = -long_n;
 		while (--count > 0)
 		{
-			s[count] = (n % 10) + 48;
-			n = n / 10;
+			s[count] = (long_n % 10) + 48;
+			long_n = long_n / 10;
 		}
 	}
 	else
 	{
 		while (--count >= 0)
 		{
-			s[count] = (n % 10) + 48;
-			n = n / 10;
+			s[count] = (long_n % 10) + 48;
+			long_n = long_n / 10;
 		}
 	}
 }
