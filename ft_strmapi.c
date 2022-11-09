@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:00:16 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/09 18:42:56 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/09 18:54:07 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
 {
-	int		i;
+	size_t	i;
 	char	*str;
 
 	if (!s)
@@ -25,8 +25,9 @@ char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
 		return (NULL);
 	while (i < ft_strlen(s))
 	{
-		str[i] == f(i, s[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = 0;
 	return (str);
 }
