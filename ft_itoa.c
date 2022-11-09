@@ -6,13 +6,12 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:20:30 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/08 19:04:57 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/09 17:07:34 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Recursive method
 static int	counter(int n, int count)
 {
 	long	long_n;
