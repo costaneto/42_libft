@@ -2,7 +2,8 @@
 	"files.associations": {
 		"libft.h": "c",
 		"string.h": "c",
-		"algorithm": "c"
+		"algorithm": "c",
+		"*.tcc": "c"
 	},
 	"42header.email": "dneto@student.42lisboa.com"
 }
