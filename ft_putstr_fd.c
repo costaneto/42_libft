@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 18:27:51 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/10 18:39:39 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/10 19:51:42 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putstr_fd(char *s, int fd)
 	if (s)
 	{
 		while (*s)
-			write(fd, &*s++, 1);
+			ft_putchar_fd(*s++, fd);
 	}
 }
