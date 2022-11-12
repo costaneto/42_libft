@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:46:24 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/06 15:22:26 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/12 15:58:24 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char sep)
 	if (!arr)
 		return (NULL);
 	i = 0;
-	while (i < counter)
+	while (i < counter && *s)
 	{
 		while (*s && *s == sep)
 			s++;
