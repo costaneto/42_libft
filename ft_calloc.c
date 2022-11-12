@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 18:29:11 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/23 12:14:39 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/12 16:29:24 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t n, size_t size)
 {
-	int	*ptr;
+	void	*ptr;
 
-	ptr = malloc(n * size);
-	if (ptr == NULL)
+	ptr = (void *)malloc(n * size);
+	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, n * size);
+	ft_memset(ptr, 0, n * size);
 	return (ptr);
 }
