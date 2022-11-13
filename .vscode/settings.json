@@ -3,7 +3,12 @@
 		"libft.h": "c",
 		"string.h": "c",
 		"algorithm": "c",
-		"*.tcc": "c"
+		"*.tcc": "c",
+		"array": "c",
+		"string_view": "c",
+		"initializer_list": "c",
+		"ranges": "c",
+		"utility": "c"
 	},
 	"42header.email": "dneto@student.42lisboa.com"
 }
