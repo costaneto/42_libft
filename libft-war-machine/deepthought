@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c2r10s7.42lisboa.com
 Linux 5.4.0-131-generic x86_64
 $> date
-Sun 13 Nov 2022 09:03:49 PM WET
+Sun 13 Nov 2022 09:41:43 PM WET
 $> gcc --version
 gcc (Ubuntu 10.3.0-1ubuntu1~20.04) 10.3.0
 Copyright (C) 2020 Free Software Foundation, Inc.
@@ -21,30 +21,32 @@ $> norminette libft.h | grep -E '(Error|Warning)'
 
 = Compiling libft ==============================================================
 $> make re
-rm -f ft_toupper.o ft_strtrim.o ft_putchar_fd.o ft_substr.o ft_strlcpy.o ft_memset.o ft_calloc.o ft_lstiter.o ft_strmapi.o ft_putendl_fd.o ft_strlcat.o ft_itoa.o ft_memchr.o ft_lstlast.o ft_memmove.o ft_striteri.o ft_lstadd_back.o ft_lstdelone.o ft_putnbr_fd.o ft_strdup.o ft_isdigit.o ft_strlen.o ft_split.o ft_lstadd_front.o ft_lstclear.o ft_strjoin.o ft_memcmp.o ft_strrchr.o ft_putstr_fd.o ft_isalnum.o ft_memcpy.o ft_isalpha.o ft_strnstr.o ft_strchr.o ft_bzero.o ft_isascii.o ft_tolower.o ft_isprint.o ft_strncmp.o ft_lstnew.o ft_atoi.o ft_lstsize.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_lstnew.o
+rm -f ft_strlcpy.o ft_memset.o ft_memchr.o ft_lstlast.o ft_lstclear.o ft_isdigit.o ft_isalpha.o ft_lstnew.o ft_strlen.o ft_memcmp.o ft_striteri.o ft_lstsize.o ft_putstr_fd.o ft_itoa.o ft_memcpy.o ft_strnstr.o ft_isascii.o ft_isprint.o ft_bzero.o ft_toupper.o ft_substr.o ft_calloc.o ft_lstiter.o ft_strmapi.o ft_putendl_fd.o ft_strlcat.o ft_strchr.o ft_memmove.o ft_putchar_fd.o ft_lstadd_back.o ft_lstmap.o ft_lstdelone.o ft_putnbr_fd.o ft_strdup.o ft_split.o ft_lstadd_front.o ft_strjoin.o ft_strrchr.o ft_isalnum.o ft_strtrim.o ft_tolower.o ft_strncmp.o ft_atoi.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_lstnew.o
 rm -f libft.a
 gcc -Wall -Wextra -Werror   -c -o ft_toupper.o ft_toupper.c
-gcc -Wall -Wextra -Werror   -c -o ft_strtrim.o ft_strtrim.c
+gcc -Wall -Wextra -Werror   -c -o ft_itoa.o ft_itoa.c
 gcc -Wall -Wextra -Werror   -c -o ft_putchar_fd.o ft_putchar_fd.c
-gcc -Wall -Wextra -Werror   -c -o ft_substr.o ft_substr.c
-gcc -Wall -Wextra -Werror   -c -o ft_strlcpy.o ft_strlcpy.c
-gcc -Wall -Wextra -Werror   -c -o ft_memset.o ft_memset.c
+gcc -Wall -Wextra -Werror   -c -o ft_lstmap.o ft_lstmap.c
 gcc -Wall -Wextra -Werror   -c -o ft_calloc.o ft_calloc.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstiter.o ft_lstiter.c
 gcc -Wall -Wextra -Werror   -c -o ft_strmapi.o ft_strmapi.c
+gcc -Wall -Wextra -Werror   -c -o ft_lstlast.o ft_lstlast.c
 gcc -Wall -Wextra -Werror   -c -o ft_putendl_fd.o ft_putendl_fd.c
 gcc -Wall -Wextra -Werror   -c -o ft_strlcat.o ft_strlcat.c
-gcc -Wall -Wextra -Werror   -c -o ft_itoa.o ft_itoa.c
 gcc -Wall -Wextra -Werror   -c -o ft_memchr.o ft_memchr.c
-gcc -Wall -Wextra -Werror   -c -o ft_lstlast.o ft_lstlast.c
+gcc -Wall -Wextra -Werror   -c -o ft_lstadd_back.o ft_lstadd_back.c
+gcc -Wall -Wextra -Werror   -c -o ft_strlen.o ft_strlen.c
 gcc -Wall -Wextra -Werror   -c -o ft_memmove.o ft_memmove.c
 gcc -Wall -Wextra -Werror   -c -o ft_striteri.o ft_striteri.c
-gcc -Wall -Wextra -Werror   -c -o ft_lstadd_back.o ft_lstadd_back.c
+gcc -Wall -Wextra -Werror   -c -o ft_strlcpy.o ft_strlcpy.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstdelone.o ft_lstdelone.c
 gcc -Wall -Wextra -Werror   -c -o ft_putnbr_fd.o ft_putnbr_fd.c
+gcc -Wall -Wextra -Werror   -c -o ft_memset.o ft_memset.c
 gcc -Wall -Wextra -Werror   -c -o ft_strdup.o ft_strdup.c
+gcc -Wall -Wextra -Werror   -c -o ft_substr.o ft_substr.c
 gcc -Wall -Wextra -Werror   -c -o ft_isdigit.o ft_isdigit.c
-gcc -Wall -Wextra -Werror   -c -o ft_strlen.o ft_strlen.c
+gcc -Wall -Wextra -Werror   -c -o ft_strtrim.o ft_strtrim.c
+gcc -Wall -Wextra -Werror   -c -o ft_lstnew.o ft_lstnew.c
 gcc -Wall -Wextra -Werror   -c -o ft_split.o ft_split.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstadd_front.o ft_lstadd_front.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstclear.o ft_lstclear.c
@@ -56,13 +58,12 @@ gcc -Wall -Wextra -Werror   -c -o ft_isalnum.o ft_isalnum.c
 gcc -Wall -Wextra -Werror   -c -o ft_memcpy.o ft_memcpy.c
 gcc -Wall -Wextra -Werror   -c -o ft_isalpha.o ft_isalpha.c
 gcc -Wall -Wextra -Werror   -c -o ft_strnstr.o ft_strnstr.c
-gcc -Wall -Wextra -Werror   -c -o ft_strchr.o ft_strchr.c
 gcc -Wall -Wextra -Werror   -c -o ft_bzero.o ft_bzero.c
 gcc -Wall -Wextra -Werror   -c -o ft_isascii.o ft_isascii.c
 gcc -Wall -Wextra -Werror   -c -o ft_tolower.o ft_tolower.c
+gcc -Wall -Wextra -Werror   -c -o ft_strchr.o ft_strchr.c
 gcc -Wall -Wextra -Werror   -c -o ft_isprint.o ft_isprint.c
 gcc -Wall -Wextra -Werror   -c -o ft_strncmp.o ft_strncmp.c
-gcc -Wall -Wextra -Werror   -c -o ft_lstnew.o ft_lstnew.c
 gcc -Wall -Wextra -Werror   -c -o ft_atoi.o ft_atoi.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstsize.o ft_lstsize.c
 ar: creating libft.a
@@ -75,10 +76,11 @@ gcc -Wall -Wextra -Werror   -c -o ft_lstadd_back.o ft_lstadd_back.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstdelone.o ft_lstdelone.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstclear.o ft_lstclear.c
 gcc -Wall -Wextra -Werror   -c -o ft_lstiter.o ft_lstiter.c
-make: *** No rule to make target 'ft_lstmap.o', needed by 'bonus'.  Stop.
+gcc -Wall -Wextra -Werror   -c -o ft_lstmap.o ft_lstmap.c
+gcc -Wall -Wextra -Werror   -c -o ft_lstnew.o ft_lstnew.c
 
 $> ls -la libft.a
--rw-r--r-- 1 dneto 2022_lisboa 71500 Nov 13 21:03 /nfs/homes/dneto/42_me/42_libft/libft-war-machine/dirlibft/libft.a
+-rw-r--r-- 1 dneto 2022_lisboa 73478 Nov 13 21:41 /nfs/homes/dneto/42_me/42_libft/libft-war-machine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -1395,7 +1397,11 @@ Diff OK :D
 $> norminette ft_lstmap_bonus.c | grep -E '(Error|Warning)'
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_lstmap.c main.c libft.a -o user_exe
 
-clang: error: no such file or directory: '/nfs/homes/dneto/42_me/42_libft/libft-war-machine/dirlibft//ft_lstmap.c'
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
 
 = ft_lstlast_bonus.c ===========================================================
 $> norminette ft_lstlast_bonus.c | grep -E '(Error|Warning)'
