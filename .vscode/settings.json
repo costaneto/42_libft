@@ -8,7 +8,8 @@
 		"string_view": "c",
 		"initializer_list": "c",
 		"ranges": "c",
-		"utility": "c"
+		"utility": "c",
+		"ft_lstiter.C": "cpp"
 	},
 	"42header.email": "dneto@student.42lisboa.com"
 }
