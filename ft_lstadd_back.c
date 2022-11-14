@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 18:43:29 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/13 19:25:10 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/14 21:25:45 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!new)
-		return ;
+	t_list	*last;
+
 	if (!*lst)
 	{
 		*lst = new;
 		return ;
 	}
-	ft_lstlast(*lst)->next = new;
-	new->next = NULL;
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
