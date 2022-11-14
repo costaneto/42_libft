@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 21:42:54 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/30 13:33:43 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/14 22:12:12 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strrchr(const char *s, int c)
 
 	s_len = ft_strlen(s);
 	if (!c)
-		return ((char *)s + s_len);
+		return ((char *)&s[s_len]);
 	while (--s_len >= 0)
 	{
-		if (s[s_len] == (unsigned char)c)
-			return ((char *)s + s_len);
+		if ((unsigned char)s[s_len] == (unsigned char)c)
+			return ((char *)&s[s_len]);
 	}
 	return (NULL);
 }
