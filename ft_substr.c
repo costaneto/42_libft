@@ -6,13 +6,11 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 21:19:55 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/31 16:33:26 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/14 19:57:37 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

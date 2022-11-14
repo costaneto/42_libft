@@ -6,12 +6,11 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:31:58 by dneto             #+#    #+#             */
-/*   Updated: 2022/10/29 16:06:49 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/14 19:58:43 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
