@@ -6,20 +6,19 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 13:08:45 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/15 18:45:08 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/15 19:19:14 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
+	char	*dest;
 
 	i = 0;
+	dest = s;
 	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
+		dest[i++] = 0;
 }
