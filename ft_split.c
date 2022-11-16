@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:46:24 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/14 21:21:31 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/16 18:19:26 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static int	ft_counter(char const *s, char sep)
 	int	i;
 
 	substr_count = 0;
+	if (!*s)
+		return (substr_count);
 	i = 0;
 	if (s[i] != sep)
 		substr_count = 1;
