@@ -38,3 +38,5 @@ fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean $(NAME)
+
+.PHONY:		all bonus clean fclean re
