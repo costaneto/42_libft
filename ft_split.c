@@ -6,7 +6,7 @@
 /*   By: dneto <dneto@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:46:24 by dneto             #+#    #+#             */
-/*   Updated: 2022/11/16 18:19:26 by dneto            ###   ########.fr       */
+/*   Updated: 2022/11/18 14:50:13 by dneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ static char	*ft_getsubstr(char const *s, char sep)
 	int		i;
 	char	*substr;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	while (s[i] && s[i] != sep)
 		i++;
@@ -63,7 +61,7 @@ char	**ft_split(char const *s, char sep)
 	if (!arr)
 		return (NULL);
 	i = 0;
-	while (i < counter && *s)
+	while (i < counter)
 	{
 		while (*s && *s == sep)
 			s++;
